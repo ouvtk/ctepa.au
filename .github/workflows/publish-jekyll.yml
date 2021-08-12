@@ -23,8 +23,11 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Archive everything for a release
+      run: zip -r _site.zip ${{ github.workspace }}/_site
+
     - name: Create release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
-        files: ${{ github.workspace }}/_site/**/*
+        files: _site.zip
