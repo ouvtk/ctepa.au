@@ -27,4 +27,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
-        files: ${{ github.workspace }}/_site/*
+        files: ${{ github.workspace }}/_site/**/*
