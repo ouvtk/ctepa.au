@@ -3,10 +3,8 @@ layout: post
 title: "Don't disregard legacy code"
 ---
 
-# Don't disregard legacy code
-
 I believe you only can gain certain experience while maintaing legacy software.
-So it is not always needed to run for a green-field projects.
+So it is not always need to chase green-field projects.
 
 Problem is that not every legacy system is beneficial for your skills and sanity.
 
@@ -14,16 +12,43 @@ Problem is that not every legacy system is beneficial for your skills and sanity
 
 The baseline definition of a legacy software is a software for a system that yet cannot be decomissioned, as it fulfills some critical need, but this system cannot be reasonably improved due to unsupported runtime, outdated environment, or some specific vendor or library lock-ins.
 
-But you may often hear legacy much more often, as opposed to greenfield development.
-That may include software which has:
- - no automated tests to make refactoring and support easier;
+But you may often hear legacy to be defined much more broadly, that may include software which has:
+ - no automated tests of core functions to make refactoring and support easier;
  - not enough documentation to describe its core functions, and design decisions;
- - no "original" engineers left, together with a knowledge of a system intricate details. 
+ - no "original" engineers left, together with a knowledge of a system intricate details;
+ - just as anything to oppose a greenfield development.
+
+This post is about legacy that still can be improved, and there is a business incentive to do so.
 
 ## Where is legacy
 
+Depending of how definition of legacy framed, it maybe from ubiqitous to common. 
+
+1. Isn’t it ubiquitous?
+1. Depends on how you define legacy, but essentially there should be more legacy systems than the new  ones (unless it grows exponentially)
+1. So more opportunities (probably)
+1. Lots of jokes about legacy from a big companies
+
 ## Why legacy is good
+
+1. Refactoring within constraints
+1. How to remove the code, not adding it
+1. Reverse engineering (if no one knows how exactly it should work)
+1. Matching business needs (with legacy you already have your core functionality)
+1. Monitoring / operations of old system with decent history and usage
+1. Forces you to go beyond boundaries to find the right solution (more code is rarely a right one)
+1. How to test difficult code
 
 ## Why legacy is bad
 
+1. Look for red flags
+1. Cannot make scaffolding or early architectual decisions
+1. If business processes are malfunction then both legacy and greenfield development will go nowhere (if you hear "I know how to do it right, just never get the chance", when there will be the chance, right thing would not happen, as routine is not established)
+1. Make sure you learn something new, not just a routine (but routine is important part as well)
+1. Things can move too slow,or not to move at all (see malfunctioning processes)
+1. Maintaining legacy by itself is quite a challenge, it will be a bigger problem if business doesn't have incentive to improve it
+1. In summary - don't be afraid legacy code, avoid legacy practices
+
 ## Summary
+
+Choose your battles wisely?
