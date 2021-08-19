@@ -22,14 +22,17 @@ This post is about legacy that still can be improved, and there is a business in
 
 ## Where is legacy
 
+Need an exponential graph here.
+
+Unless humanity creates as more as twice of green-field projects during next time period, than previously ever created. We have more systems that can fall into legacy category, than new systems.
+
 Depending of how definition of legacy framed, it maybe from ubiqitous to common. 
 
-1. Isn’t it ubiquitous?
-1. Depends on how you define legacy, but essentially there should be more legacy systems than the new  ones (unless it grows exponentially)
-1. So more opportunities (probably)
-1. Lots of jokes about legacy from a big companies
-
 ## Why legacy is good
+
+Good legacy systems have established usage patterns. They may not be known by you, or by the team. But figuring it out is one of the good skills to have - either by user interviewing, or by adding monitoring to your system.
+
+After system reaches certain size, no one has exact understanding of all the processes that happening within the system. Often request for a new modification leads to a reverse engineering of how certain part of the system works.
 
 1. Refactoring within constraints
 1. How to remove the code, not adding it
