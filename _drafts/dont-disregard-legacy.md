@@ -30,17 +30,13 @@ Depending of how definition of legacy framed, it maybe from ubiqitous to common.
 
 ## Why legacy is good
 
-Good legacy systems have established usage patterns. They may not be known by you, or by the team. But figuring it out is one of the good skills to have - either by user interviewing, or by adding monitoring to your system.
+Good legacy systems have established usage patterns. They may not be known by you, or by the team. But figuring it out is one of the helpful skills to have - either by user interviewing, or by adding monitoring to your system. [Monitoring / operations of old system with decent history and usage]
 
-After system reaches certain size, no one has exact understanding of all the processes that happening within the system. Often request for a new modification leads to a reverse engineering of how certain part of the system works.
+After system reaches certain size, no one has exact understanding of all the processes that happening within the system. Often request for a new modification leads to a reverse engineering of how certain part of the system works. [Reverse engineering (if no one knows how exactly it should work)] 
 
-1. Refactoring within constraints
-1. How to remove the code, not adding it
-1. Reverse engineering (if no one knows how exactly it should work)
-1. Matching business needs (with legacy you already have your core functionality)
-1. Monitoring / operations of old system with decent history and usage
-1. Forces you to go beyond boundaries to find the right solution (more code is rarely a right one)
-1. How to test difficult code
+Expanding feature set of the legacy system requires additional thinking in order to keep complexity at the reasonable level (to not cause much instabilities). Often writing more code is not the best solution to a problem. Ideally you would even want to reduce code, while still delivering expected outcome. [Refactoring within constraints, How to remove the code, not adding it, Matching business needs (with legacy you already have your core functionality), Forces you to go beyond boundaries to find the right solution (more code is rarely a right one)]
+
+[How to test difficult code]
 
 ## Why legacy is bad
 
