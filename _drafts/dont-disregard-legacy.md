@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't disregard legacy code"
+title: "Don't be afraid of legacy code"
 ---
 
 I believe you only can gain certain experience while maintaing legacy software.
@@ -18,15 +18,16 @@ But you may often hear legacy to be defined much more broadly, that may include 
  - no "original" engineers left, together with a knowledge of a system intricate details;
  - just anything in the opposition to a greenfield development.
 
-This post is about broad definition of legacy that still can be improved, and there is surely a business incentive to do so.
+This post is about broad definition of legacy as an old software system that still can be improved.
+[//]: # (and there is surely a business incentive to do so.) 
 
 ## Where is legacy
 
-![Exponential chart here]()
+![Exponential chart here](/assets/images/dont-disregard-legacy/exponential.png)
 
 Unless humanity creates as more as twice of green-field projects during next time period, than previously ever created. We have more systems that can fall into legacy category, than new systems.
 
-Depending of how definition of legacy framed, it maybe from ubiqitous to common. 
+Depending of how definition of legacy framed, it may range from ubiqitous to just common. And this increases likelyhood of you working on a legacy project, rather than a greenfield one.
 
 ## Attractive parts
 
