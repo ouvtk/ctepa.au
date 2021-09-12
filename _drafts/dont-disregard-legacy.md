@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't be afraid of legacy products"
+title: "Don't be afraid of legacy systems"
 ---
 
 I believe you only can gain certain experience while maintaing legacy software.
@@ -18,19 +18,15 @@ But you may often hear legacy to be defined much more broadly, that may include 
  - no "original" engineers left, together with a knowledge of a system intricate details;
  - just anything in the opposition to a greenfield development.
 
-This post is about broad definition of legacy as an old software system that still can be improved. 
-[//]: # (Usually this comes with a product-led development.)
-[//]: # (and there is surely a business incentive to do so.) 
+This post is about broad definition of legacy as an old software system that still can be improved. Usually this possible during product-led development, not when project has development and maintenance phases. And there surely should be business incentive to improve.
 
 ## Where is legacy
 
-![Exponential chart here](/assets/images/dont-disregard-legacy/exponential.png)
+![Exponential chart](/assets/images/dont-disregard-legacy/exponential_ed.jpg)
 
-Unless humanity creates as more as twice of green-field projects during next time period, than previously ever created. We have more systems that can fall into legacy category, than new systems.
+Just speculating here, but unless humanity creates as twice of green-field projects during next time period as previously ever created - we have more systems that can fall into legacy category, than new systems.
 
 Depending of how definition of legacy framed, it may range from ubiqitous to just common. And this increases likelyhood of you working on a legacy project, rather than a greenfield one.
-
-[//]: # (This is about legacy that still must evolve to fulfill the need. So it only works for products, not projects?)
 
 ## Attractive parts
 
@@ -44,22 +40,22 @@ If contraints allow it is an interesting excersise to write tests for existing c
 
 ## Detractive parts
 
-Scaffolding and early architectural decisions were done in the past. And some can be changed with a major effort, others with even greater effort.
+For old system scaffolding and early architectural decisions were done far in the past. And some of those decisions can only be changed with a major effort, others with even greater effort.
 
-Just due to complexity and size of the code, system may have more small bugs that require attention. It is easy to fall into process of fixing small annoying bugs, rather than focusing on bigger chunks of important changes. Make sure you challenge yourself and learn something new, not only routinely fixing minor problems.
+Just due to complexity and size of the code, system may have more small bugs that require attention. It is easy to fall into process of fixing small annoying bugs, rather than focusing on bigger chunks of important changes. Make sure you challenge yourself and learn something new, not routinely fixing only minor problems.
 
-Big systems without established best practices could mean that things will move slowly, need to have patience for a longer feedback loop. Which also makes it harder to tell whether things are improving or stagnating.
-
-[//]: # (When software has 'project' phase and 'maintenance' phase - throwing it over the fence for other team to maintain - losing knowledge, having no incentive to improve)
+Also big systems without established best practices could mean that things will move slowly, need to have patience for a longer feedback loop. Which also makes it harder to tell whether things are improving or stagnating.
 
 ## Summary
 
 Legacy code can be improved and be up to date, while you are getting crucial skills.
 
-Wary when you hear "I know how to do it right, just never get the chance", often when there is a chance, no "right" thing happens, because routine is not established.
+By itself having legacy system doesn't mean you are doomed, but if business processes are malfunction then both legacy and greenfield development will go nowhere pleasant.
 
-If business processes are malfunction then both legacy and greenfield development will go nowhere pleasant. Maintaining legacy by itself is challening, and it will be even bigger problem if business doesn't now how to improve it, or doesn't have an incentive to.
+Maintaining legacy by itself is challening, and it will be even bigger problem if business doesn't now how to improve it, or doesn't have an incentive to.
 
-Don't be afraid of the legacy code, be afraid of the legacy practices. And choose your battles wisely?
+Wary when you hear "I know how to do it right, just never get the chance", often when there is a chance, no "right" thing happens, because routine is not established. And it may pose a challenge of upskilling your team first, before tackling legacy.
+
+Don't be afraid of the legacy code, be afraid of the legacy practices. And choose your battles wisely.
 
 [//]: # (It is not too common for a legacy project/product to be good. But that's also applicable to a greenfield project/product within same organisation - broken processes are broken everywhere.)
