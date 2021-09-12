@@ -3,8 +3,8 @@ layout: post
 title: "Don't be afraid of legacy systems"
 ---
 
-I believe you only can gain certain experience while maintaing legacy software.
-It is not always need to chase green-field projects.
+I believe you only can gain certain experience while maintaining legacy software.
+It is not always need to chase greenfield projects.
 
 Problem is that not every legacy system is beneficial for your skills and sanity.
 
@@ -24,13 +24,13 @@ This post is about broad definition of legacy as an old software system that sti
 
 ![Exponential chart](/assets/images/dont-disregard-legacy/exponential_ed.jpg)
 
-Just speculating here, but unless humanity creates as twice of green-field projects during next time period as previously ever created - we have more systems that can fall into legacy category, than new systems.
+Just speculating here, but unless humanity creates as twice of greenfield projects during next time period as previously ever created &mdash; we have more systems that can fall into legacy category, than new systems.
 
 Depending of how definition of legacy framed, it may range from ubiqitous to just common. And this increases likelyhood of you working on a legacy project, rather than a greenfield one.
 
 ## Attractive parts
 
-Good legacy systems have established usage patterns. They may not be known by you, or by the team. But figuring it out is one of the helpful skills to have - either by user interviewing, or by adding monitoring to your system.
+Good legacy systems have established usage patterns. They may not be known by you, or by the team. But figuring it out is one of the helpful skills to have &mdash; either by user interviewing, or by adding monitoring to your system.
 
 After system reaches certain size, no one has exact understanding of all the processes that happening within the system. Often request for a new modification leads to a reverse engineering of how certain part of the system works. 
 
@@ -57,5 +57,3 @@ Maintaining legacy by itself is challening, and it will be even bigger problem i
 Wary when you hear "I know how to do it right, just never get the chance", often when there is a chance, no "right" thing happens, because routine is not established. And it may pose a challenge of upskilling your team first, before tackling legacy.
 
 Don't be afraid of the legacy code, be afraid of the legacy practices. And choose your battles wisely.
-
-[//]: # (It is not too common for a legacy project/product to be good. But that's also applicable to a greenfield project/product within same organisation - broken processes are broken everywhere.)
