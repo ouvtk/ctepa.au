@@ -40,7 +40,7 @@ _Automating regression testing._ If contraints allow it is an interesting excers
 
 ## Detractive parts
 
-_Hard to turn the ship._ For an old system scaffolding and early architectural decisions were done far in the past. And some of those decisions can only be changed with a major effort, others with even greater effort.
+_Harder to turn the ship._ For an old system scaffolding and early architectural decisions were done far in the past. And some of those decisions can only be changed with a major effort, others with even greater effort.
 
 _More small bugs._ Just due to complexity and size of the code, system may have more small bugs that require attention. It is easy to fall into process of fixing small annoying bugs, rather than focusing on bigger chunks of important changes. Make sure you challenge yourself and learn something new, not routinely fixing only minor problems.
 
