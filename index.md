@@ -6,4 +6,4 @@ layout: home
 ---
 
 My point of view changes depending on the experience I get. 
-No need to agree with it &mdash your mileage may vary.
+No need to agree with it &mdash; your mileage may vary.
