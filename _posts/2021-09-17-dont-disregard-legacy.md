@@ -22,7 +22,7 @@ This post is about the broad definition of legacy as an old software system that
 
 ## Where is legacy
 
-![Exponential chart](/assets/images/dont-disregard-legacy/exponential_ed.jpg)
+![Exponential chart](/assets/images/dont-disregard-legacy/exponential.svg)
 
 Just speculating here, but unless humanity creates as twice of greenfield projects during the next time period as previously ever created &mdash; we have more systems falling into the legacy category, rather than new systems.
 

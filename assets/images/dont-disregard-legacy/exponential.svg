@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg5"
+   version="1.1"
+   viewBox="0 0 1280 719.99999"
+   height="720"
+   width="1280"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="7.6999998"
+       markerHeight="5.5999999"
+       viewBox="0 0 7.7 5.6"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L" />
+    </marker>
+    <pattern
+       xlink:href="#Strips1_3"
+       id="pattern4113"
+       patternTransform="matrix(2.356993,-3.6107128,7.5720278,4.9428512,273.5,50)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="4"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_3">
+      <rect
+         style="fill:black;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect10819" />
+    </pattern>
+    <linearGradient
+       id="linearGradient11836">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop11834" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1">
+    <path
+       d="m 0.5,0 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 m 10,-720 0,720 M 0.5,0.5 l 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0 m -1280,10 1280,0"
+       style="fill:none;stroke:#cccccc;stroke-width:1px"
+       id="path1421" />
+    <path
+       id="path9814"
+       style="fill:url(#pattern4113);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 417.20703,110.4707 -0.01,0.0293 H 270.5 v 480 c 13.33331,-13.33319 26.50126,-19.75196 40,-40 13.49873,-20.24804 26.59369,-39.78109 40,-80 13.4063,-40.21891 26.60176,-81.54785 40,-160 8.88665,-52.03497 17.79499,-125.96176 26.70312,-200 10e-4,-0.01 0.003,-0.0195 0.004,-0.0293 z" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5.99999996;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+       d="m 210,590.4996 h 920"
+       id="path1552" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 270.5,50 V 650"
+       id="path2958" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.99999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+       d="m 270.5,590.4996 c 13.33333,-13.3332 26.50125,-19.75154 40,-39.9996 13.49875,-20.24806 26.59368,-39.78105 40,-80 13.40632,-40.21895 26.60175,-81.54777 40,-160 8.88784,-52.04194 17.79706,-125.98146 26.70639,-200.02965"
+       id="path7420" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal'"
+       x="230.5"
+       y="140.5"
+       id="text9028"><tspan
+         id="tspan9026"
+         x="230.5"
+         y="140.5"
+         style="text-align:end;text-anchor:end">More new </tspan><tspan
+         x="230.5"
+         y="190.5"
+         id="tspan9812"
+         style="text-align:end;text-anchor:end">systems</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal'"
+       x="564.98633"
+       y="384.92578"
+       id="text9808"><tspan
+         id="tspan9806"
+         x="564.98633"
+         y="384.92578">More old </tspan><tspan
+         x="564.98633"
+         y="434.92578"
+         id="tspan9810">systems</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.1184;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 269.50861,283.94126 -69.3337,-45.22428"
+       id="path4178" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.1184;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 395.21941,389.3916 69.3337,45.22428"
+       id="path5906" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.1184;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 410.25022,319.21236 69.3337,45.22428"
+       id="path5910" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6.1184;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 419.83315,243.88786 69.3337,45.22428"
+       id="path5916" />
+  </g>
+</svg>
