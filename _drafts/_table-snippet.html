@@ -1,0 +1,115 @@
+<div id="table-snippet-container"></div>
+<table style="background-color: beige; width: 100px; height: 100px;">
+    <tbody>
+        <tr id="empty">
+            <th>1</th>
+        </tr>
+    </tbody>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/preact/dist/preact.mjs" type="module"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.css">
+<script type="module">
+    import { html, render, Component } from 'https://unpkg.com/htm/preact/index.mjs?module'
+
+    const tableHeaders = {
+        "caption": "Electric toothbrush models",
+        "order": ["manufacturer", "model", "country"],
+        "emphasis": ["manufacturer", "model"],
+    };
+    const electricToothbrushes = [
+        {
+            "manufacturer": "Forte",
+            "model": "X-Prime",
+            "country": "Italy"
+        },
+        {
+            "manufacturer": "Forte",
+            "model": "Ultraclean",
+            "country": "Italy"
+        },
+        {
+            "manufacturer": "Dent-o-Fresh",
+            "model": "EZbrush",
+            "country": "USA"
+        },
+        {
+            "manufacturer": "Brushmaster",
+            "model": "SuperBrush",
+            "country": "USA"
+        },
+        {
+            "manufacturer": "Kobayashi",
+            "model": "ST-60",
+            "country": "Japan"
+        },
+        {
+            "manufacturer": "Hoch",
+            "model": "Toothmaster",
+            "country": "Germany"
+        },
+        {
+            "manufacturer": "Hoch",
+            "model": "X-Prime",
+            "country": "Germany"
+        }
+    ];
+
+    class Table extends Component {
+        render(props) {
+            const headers = props.headers;
+            console.log(headers);
+            return html`<table>
+            <caption>${headers.caption}</caption>
+            <thead>
+                <tr id="original">
+                    ${headers.order.map(name => {
+                const hasEmphasis = headers.emphasis.includes(name);
+                return html`<th>
+                            ${hasEmphasis === true ? html`<u >${name}</u>` : name} 
+                            </th>`
+            })}
+                </tr>
+            </thead>
+            <tbody>
+                ${props.items.map(row => 
+                html`<tr>
+                        ${headers.order.map(name =>
+                        html`<td>${row[name] ?? 'N/A'}</td>`
+                        )}
+                    </tr>`
+                )}
+            </tbody>
+            </table>`;
+        }
+    }
+
+    // render an instance of Clock into <body>:
+    render(html`<${Table} 
+        headers=${tableHeaders} 
+        items=${electricToothbrushes} />`, document.getElementById('table-snippet-container'));
+
+    const draggable = [
+        document.getElementById('original'),
+        document.getElementById('empty'),
+    ]
+
+    const drake = dragula({ revertOnSpill: true })
+    drake.containers = draggable
+
+    const onDrag = function (el, source) {
+        console.log('drag', Element)
+    }
+    const onCancel = function (el, container, source) {
+        console.log('cancel', el)
+    }
+    const onShadow = function (el, container, source) {
+        console.log('shadow', el.cellIndex, container, source)
+    }
+
+    drake
+        .on('drag', onDrag)
+        .on('cancel', onCancel)
+        .on('shadow', onShadow)
+</script>
