@@ -3,7 +3,7 @@ layout: post
 title: "Let it go"
 ---
 
-Let go of the best solution in favour of just a good one, when you are not the one who builds it.
+Respect a good solution rather than the best one, when you are not the one who builds it.
 
 Work never ends, and there are only a limited number of things you can focus on at any given time.
 
