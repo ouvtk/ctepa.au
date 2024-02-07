@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Improve the candidate interview experience"
+title: "Enhance the candidate's interview experience"
 ---
 
 The job interviewing is a hard work for both candidates and hiring teams.
