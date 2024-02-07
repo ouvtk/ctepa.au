@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Candidate's interview experience"
+title: "Improve the candidate interview experience"
 ---
 
 The job interviewing is a hard work for both candidates and hiring teams.
@@ -26,15 +26,15 @@ Give as much information upfront as you have now. Even if you're unsure about th
 
 Some information is better than none, as long as it is accurate.
  
-## During the phone calls
+## For phone calls
 Introductory phone call is usually expected (either with a recruiter or hiring manager). But if you have more than one - explain that no preparation is needed, and that’s a conversation to explain about business and to ask about past experience.
  
-## During the interviews
+## For interviews
 Explain the interview format and what preparations the candidate should undertake.
 
 For example, mention that this will be a conversation about their technical knowledge in the areas that mentioned in the job description. Or an interview to ask behavioural questions to see how answers help to demonstrate values aligned with the values of your company or the team.
 
-## During the coding tasks
+## For coding tasks
 Outline the required setup upfront, if any. Offer a choice of programming languages (as candidate's setup may require adjustments). 
 
 Explain what is expected as a result. Sometimes final solution has to work (therefore testing and runtime environments should be part of the setup). Sometimes it is the coding without really running the code (e.g., whiteboard excercises).
