@@ -1,0 +1,62 @@
+---
+layout: post
+title: "[In Progress] Skoda Kodiaq Canton replacement"
+---
+
+TL;DR: I don't have a suitable solution. This is not a guide. It is a stream of thoughts to document how I got here.
+
+If you are looking for feasible Canton replacement, you probably need to find a solution to get signal out of factory amplifier to your digital signal processor (DSP) and further to your amplifier.
+I've also heard anecdotes to re-coding the car audio head unit to behave as non-Canton one, which makes it is easier to deal with (I guess less channels to manipulate on DSP).
+I don't accepted this fate yet, as it leads towards complex system with likely compromised quality (and also an overall expensive system as a bonus).
+
+Trying to find a special way.
+
+# Input parameters
+Skoda Kodiaq 2021 with Canton audio installed:
+ - 4 mid-bass,
+ - 4 tweeters,
+ - 1 centre speaker,
+ - 1 subwoofer, and
+ - 1 amplifier with DSP that drives everything above.
+Sounds good for what it is, but doesn't bring me joy.
+
+Blindly replacing speaker drivers without replacing the amplifier is a risky business. Or at least without getting controls over the sound levels per speaker. 
+Canton equaliser (EQ) has 7 bands, which is way better than typical 'treble-bass', and gives enough flexibility for the customers. Still 32-band EQ would be better for me, while scary for many others.
+Also getting access to cross-over points and filter slopes would be great.
+
+# Looking into the amplifier
+So that's where I've started - the device name is 'Panasonic 16CH ETH Audio Amplifier', with the part number 3G0 035 466.
+And from my understanding 16CH means 16 channels, but there are bridged channels for 2 front mid-bass drivers and for the subwoofer with 2 coils, making it 12 channels amplifier in this setup.
+
+Trying to understand better what can be done with an amp, was looking inside:
+[amp-back-panel.jpg]
+
+The main thing that draws attention is how tracks on the right side of the board are layed out with a very smooth turns, not usual 45 degrees turns.
+I think this is where `ETH` from the name comes into play. These tracks lead into NXP TJA1100 microchip (through the opto- or similar isolation), which provides 100BASE-T1 PHY for Automotive Ethernet.
+
+That looked promising, as it is not some unknown communication medium. Internet has mentions of the MOST bus being used for Canton amplifiers, and hard to tell if it makes things more difficult or not.
+
+So my immediate idea - I want to do 'Man-in-the-Middle' between a car audio head unit and an amplifier to see what is going on there, and if I can make any sense of it.
+
+# Connecting to Automotive Ethernet
+Didn't connect to Automotive Ethernet before (and didn't even know it exist as a separate thing). So started to look for an adapter that will allow to connect Automotive Ethernet with a regular laptop. 
+And as I find out these usually described as 100BASE-TX to 100BASE-T1 PHY adapters.
+
+One promising thing was NXP RDDRONE-T1ADAPT (https://nxp.gitbook.io/rddrone-t1adapt). It uses same TJA1100 microchip that in my mind could minimise any incompatibilities. 
+RDDRONE adapter has good documentation, and being from a reputable manufacturer gives more hope. But at that time I would have to wait it for 3+ months. 
+I wanted it sooner.
+
+After few evenings scrolling on AliExpress I've landed with SPEEDLINK SE1002 from Maxgeek (https://www.aliexpress.com/item/1005006490096103.html). Some pros:
+- it has good metal case, 
+- it is compact, 
+- it is possible to power via USB-C, and
+- the customer support is responsive and shared all user manuals they had.
+And it wasn't that expensive in case nothing works at all.
+
+# Connecting to the Amplifier
+In mean time I needed to solve connectivity of the above adapter with the circuit between the amplifier and the car audio head unit.
+
+Good that I have a friend of mine who had a business to install audio, and apparently the connector that amplifier has is pretty common across European car brands.
+
+Solution was to buy one of the OEM adapter harnesses. In my case the cheapest suitable Audiotec Fischer harness that was in stock - https://www.audiotec-fischer.de/en/match/adaptors-harnesses/pp-mb-1-9mbux-bur.
+That way I can connect anything in-between the head unit and the amplifier, without touching (as if modifying) factory wires or connectors.
