@@ -131,6 +131,8 @@ This time, I was able to ensure that the head unit multicasts UDP to:
 The amplifier only multicasts to `ff14::1:2d`. I wonder if the head unit performs discovery this way - different types of amplifiers may respond to different addresses?
 The payloads were similar to those from the second attempt, with an addition - I was able to see some ASCII abbreviations, like SKCANCEQ (which I assume stands for Skoda Canton Custom Equalizer, but it's not important at this stage).
 
+I've tried to send replicas of some of the packets I've seen with [Scapy](https://scapy.readthedocs.io/en/latest/introduction.html#about-scapy) - found it through [Wireshark Wiki](https://wiki.wireshark.org/Tools#traffic-generators). And it is the most suitable tool for me at this stage. The way it stacks the layers of different protocols is very visual to what is going to build the packet: `Ether() / IPv6(dst='ff14::1:2d') / UDP(sport=42993,dport=42514) / "\x38\x00\x2d\x01\x00\x00\x00\x04\x3b\x61\x00\x00"`.
+
 Also, I don't know exactly what I did - turning the car power on and off, touching the not-so-great-quality switch on the harness, or switching Master-Slave on the adapter - but the head unit started sending Real-time Transport Protocol (RTP) and AVB RTP Control Protocol (RTCP) packets.
 Both RTP and AVB RTCP were multicasted to `ff14::2:2`. The RTP payload of Type 98 (which I learned is dynamic) was always empty.
 
