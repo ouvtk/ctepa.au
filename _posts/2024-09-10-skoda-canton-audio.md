@@ -26,6 +26,18 @@ Blindly replacing speaker drivers without replacing the amplifier is risky busin
 The Canton equalizer (EQ) has 7 bands, which is way better than the typical 'treble-bass' and gives enough flexibility for customers. Still, a 32-band EQ would be better for me, while scary for many others.
 Also, getting access to crossover points and filter slopes would be great.
 
+# Possible options
+Options that I think may get car sound closer to idealistic goal:
+0. Buy another car
+1. Replace speakers, see if it better
+2. Downgrade to a regular sound setup (non-Canton), take high-level analogue signal from the head unit.
+3. Re-code head unit to output a more widely known digital output (like MOST or A2B)
+4. Take analogue high-level output from the Canton amplifier
+5. Decode digital audio signal between the head unit and the amplifier
+6. Get the digital audio signal from the amplifier's PCB between CPU and DSP.
+
+Because I don't know how to tackle option 3 (digital output takes precedence), for now I will focus on pursing options 1 (speakers likely has to be replaced anyway) and 5 (also digital).
+
 # Looking into the Amplifier
 So that's where I've started - the device name is 'Panasonic 16CH ETH Audio Amplifier', with the part number 3G0 035 466. From my understanding, 16CH means 16 channels, but not all of the channels are used in my setup as far as I can see.
 
@@ -137,3 +149,14 @@ Also, I don't know exactly what I did - turning the car power on and off, touchi
 Both RTP and AVB RTCP were multicasted to `ff14::2:2`. The RTP payload of Type 98 (which I learned is dynamic) was always empty.
 
 So, it definitely requires some negotiation and understanding between the sender and receiver before the head unit will start to send anything meaningful.
+
+# Time-sensitive networking
+
+For now I don't know how important to have a TSN negotiation happening between the amplifier and the head unit, but that looked as a simple step to tackle. I find it non-trivial to find actual differences between software and hardware timestamping (like what guarantees one can provide that other cannot). And equally challenging to find whether certain Ethernet adapter has hardware support or not, and my USB-C one that I use with the laptop definitely doesn't.
+
+Three most common software implementations:
+- [Avnu/gptp](https://github.com/Avnu/gptp) - has a bug that it cannot use adapter with name 15 characters or more (according to the code I believe intention was to support 16 characters, but off-by-one error :). Created alias for the network interface, app started, but there is no software timestamping.
+- [ptpd](https://github.com/ptpd/ptpd) - only supports IPv4, while Skoda's network is IPv6.
+- [linuxPTP/ptp4l](https://linuxptp.nwtime.org/) - worked well
+
+Need to use [Automotive profile](https://linuxptp.nwtime.org/documentation/configs/automotive-slave/) configuration. But essentially this didn't help and 'ptp4l' on a laptop kept getting into failed state after a few peer request attempts. There is a definitely a difference that software timestaping missing 'PTP_TIMESCALE' flag in its packets, and wasn't able to find if this is something that is only available through hardware support.
