@@ -171,6 +171,8 @@ Ordered the adapter straight away, but I was pretty stubborn (and cheap) - tried
 - using Cisco's Switch Port Analyzer.  
 All of these had various levels of success, but generally no optimal result. So, I eventually bought a network tap later.
 
+![Lots of wires inside the car connected with two ethernet adapters, a network tap and a laptop](/assets/images/skoda-canton/harness-network-tap.jpg)
+
 With everything together I was able to see the communication between the devices.
 Generally applied to all the communication - uses VLAN with ID 3 and IPv6.  
 
