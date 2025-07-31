@@ -163,33 +163,36 @@ Need to use [Automotive profile](https://linuxptp.nwtime.org/documentation/confi
 
 # Sniffing
 
-Since last time I wasn't sure if direction I'm going was the right one, so I wrote an email to manufacturer of the head unit, and to folks from mObridge / Fiberdyne (they have a few praises on diymobileaudio.com forum). As expected no response from the manufacturer, and response from Fiberdyne exceeded all my possible expectations - Julian explained that path is somewhat correct, but replacing either amplifier or headunit in attempt to understand how they communicate, is very difficult approach. So I need a second automotive ethernet adapter and a proper network tap (recommendations were Intrepid RAD-Moon and SharkTap 10/100).
+Since last time I wasn't sure if the direction I was going was the right one, I wrote an email to the manufacturer of the head unit, and to folks from mObridge / Fiberdyne (they have a few praises on the diymobileaudio.com forum). As expected, there was no response from the manufacturer, but the response from Fiberdyne exceeded all my expectations - Julian explained that my approach was somewhat correct, but that replacing either the amplifier or head unit in an attempt to understand how they communicate is a very difficult approach. He recommended that I get a second Automotive Ethernet adapter and a proper network tap (his recommendations were the Intrepid RAD-Moon and SharkTap 10/100).
 
-Ordered adapter straight away, but I was pretty stubborn and cheap - tried to avoid buying network tap - by finding network hub (their selling price now like they are made of gold), trying passive tap (crossing physical wires), or by using Cisco's Switch Port Analyzer - everything with various levels of success, but generally no optimal result. So bought network tap later.
+Ordered the adapter straight away, but I was pretty stubborn (and cheap) - tried to avoid buying a network tap by: 
+- looking for a network hub (their selling price now is like they are made of gold), 
+- trying a passive tap (crossing physical wires), or 
+- using Cisco's Switch Port Analyzer.  
+All of these had various levels of success, but generally no optimal result. So, I eventually bought a network tap later.
 
 With everything together I was able to see the communication between the devices.
 Generally applied to all the communication - uses VLAN with ID 3 and IPv6.  
 
-gPTP does its magic with sync, follow up and peer delay packets. Clock source is 22:22:22:22:22:22, and doesn't come from the headunit. Amplifier responds well.
+gPTP does its magic with sync, follow up and peer delay packets. Clock source is 22:22:22:22:22:22, and doesn't come from the head unit. Amplifier responds well.
 
-Then head unit sends a SOME/IP packet every 200 ms to the multicast address `ff14::5`. But I think this isn't used in case of Canton.
+Then the head unit sends a SOME/IP packet every 200 ms to the multicast address `ff14::5`, but I think this isn't used in the case of Canton.
 
-Destination Address: `ff14::1:2d` - both headunit and amplifier send custom UDP payload there
-Configuration between headunit and amplifier is exchanged through UDP multicast to `ff14::1:2d`.
-As far as Wireshark can tell the custom protocol is being used, and reverse engineering of the fields as much as I could with the help of LLM:
+Configuration between headunit and amplifier is exchanged through UDP multicast to `ff14::1:2d` - both of them send custom UDP payload there.
+Wireshark cannot identify the protocol they use. I tried to reverse engineer the fields as much as I could, with the help of LLMs:
 | Header | Envelope length | Flags for command envelope? | Command length | Command Type | Parameter | Payload |
 |--------|----------------|-----------------------------|----------------|--------------|-----------|---------|
-|First byte is always `30` for Headunit, and `38` for Amplifier | Only has it if in the envelope | Not every command has it | | Always `1b` or `2b` from the headunit, and looks like `1b` is a read request, `2b` is request to store new value. From amplifier always returns as `3b` and `4b` | | |
-| Headunit: |
+|The first byte is always `30` for the head unit, and `38` for the amplifier | Only present if in the envelope | Not every command has it | | Always `1b` or `2b` from the head unit (looks like `1b` is a read request, `2b` is a request to store a new value). From the amplifier always returns as `3b` and `4b` | | |
+| Head unit: |
 | `30002d01` | `0000001a` | `afff` | `00000012` | `2b` | `5e` | `08534b43414e43455108534b43414e414c4c` #&nbsp;This&nbsp;is&nbsp;SKCANCEQ&nbsp;SKCANALL |
 | Amplifier: |
 | `38002d01` | `0000001a` | `8fff` | `00000012` | `3b` | `5e` | `08534b43414e43455108534b43414e414c4c` |
 | `38002d01` | `0000001a` | `8fff` | `00000012` | `4b` | `5e` | `08534b43414e43455108534b43414e414c4c` | 
 
-The audio itself uses RTP / RTCP protocol and streams sound as is, without any encryption (luckily).
+The audio itself uses the RTP / RTCP protocol and streams sound as is, without any encryption (luckily).
 
-__Headunit__ multicasts RTP and RTCP to two destinations:
-1. Screen taps (with assumption that parktronic beeps and navigation goes here as well). This RTP payload is 3 times longer than the ones for music, so it is either 24 bit 96kHz stereo, or 6 channels for 16 bit 48kHz (my bet is for the latter):
+__Head unit__ multicasts RTP and RTCP to two destinations:
+1. Screen taps (with assumption that parktronic beeps and navigation go here as well). This RTP payload is 3 times longer than the ones for music, so it is either 24bit 96kHz stereo, or 6 channels for 16 bit 48kHz (my bet is for the latter):
    - IPv6: __ff14::2:1__
    - VLAN priority __6__
    - Name `ANN\n` (announcements?)
@@ -198,7 +201,7 @@ __Headunit__ multicasts RTP and RTCP to two destinations:
 2. The music itself in 48kHz 16bit format as raw as possible (I was changing big-endian to little-endian and adding headers, and played it as WAV):
    - IPv6: __ff14::2:2__
    - VLAN priority __3__
-   - Name `ENT\n` (entertaiment?)
+   - Name `ENT\n` (entertainment?)
    - Type __DynamicRTP-98__
 
 __Amplifier__ sends all the post-processed music (with applied equaliser etc) back to the:
