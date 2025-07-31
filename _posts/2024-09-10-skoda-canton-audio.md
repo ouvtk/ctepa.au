@@ -182,9 +182,14 @@ Then the head unit sends a SOME/IP packet every 200 ms to the multicast address 
 
 Configuration between headunit and amplifier is exchanged through UDP multicast to `ff14::1:2d` - both of them send custom UDP payload there.
 Wireshark cannot identify the protocol they use. I tried to reverse engineer the fields as much as I could, with the help of LLMs:
+
+Notes for the below table:
+- Header: The first byte is always `30` for the head unit, and `38` for the amplifier
+- Envelope is not always present - so no length and no flags.
+- Command Type: Always `1b` or `2b` from the head unit (looks like `1b` is a read request, `2b` is a request to store a new value). From the amplifier always returns as `3b` and `4b`
+
 | Header | Envelope length | Flags for command envelope? | Command length | Command Type | Parameter | Payload |
-|--------|----------------|-----------------------------|----------------|--------------|-----------|---------|
-|The first byte is always `30` for the head unit, and `38` for the amplifier | Only present if in the envelope | Not every command has it | | Always `1b` or `2b` from the head unit (looks like `1b` is a read request, `2b` is a request to store a new value). From the amplifier always returns as `3b` and `4b` | | |
+| -------- | ---------------- | ----------------------------- | ---------------- | -------------- | ----------- | --------- |
 | Head unit: |
 | `30002d01` | `0000001a` | `afff` | `00000012` | `2b` | `5e` | `08534b43414e43455108534b43414e414c4c` #&nbsp;This&nbsp;is&nbsp;SKCANCEQ&nbsp;SKCANALL |
 | Amplifier: |
