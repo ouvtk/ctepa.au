@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[In Progress] Skoda Kodiaq Canton replacement"
+title: "Unhappy story (so far) of Skoda Kodiaq Canton replacement"
 ---
 
 TL;DR: I don’t have a suitable solution. This is not a guide; it is a stream of thoughts to document how I got here.
 
-If you are looking for a feasible Canton replacement, you probably need to find a solution to get the signal out of the factory amplifier to your digital signal processor (DSP) and then to your amplifier.
-I've also heard anecdotes about re-coding the car audio head unit to behave as a non-Canton one, which makes it easier to deal with (I guess fewer channels to manipulate on the DSP).
+If you are looking for a feasible Canton replacement, you probably need to find a solution to get the signal out of the factory amplifier to a digital signal processor (DSP) and then to an amplifier.
+I've also heard anecdotes about re-coding the car audio head unit to behave as a non-Canton one, which may be an option if you are in Europe.
 
 I haven't accepted this fate yet, as it leads towards a complex system with likely compromised quality (and also an overall expensive system as a bonus).
 
@@ -199,7 +199,7 @@ Notes for the below table:
 The audio itself uses the RTP / RTCP protocol and streams sound as is, without any encryption (luckily).
 
 __Head unit__ multicasts RTP and RTCP to two destinations:
-1. Screen taps (with assumption that parktronic beeps and navigation go here as well). This RTP payload is 3 times longer than the ones for music, so it is either 24bit 96kHz stereo, or 6 channels for 16 bit 48kHz (my bet is for the latter):
+1. Screen taps (with navigation going here as well). This RTP payload is 3 times longer than the ones for music, looks like it is 6 channels of 16 bit 48kHz:
    - IPv6: __ff14::2:1__
    - VLAN priority __6__
    - Name `ANN\n` (announcements?)
@@ -216,3 +216,5 @@ __Amplifier__ sends all the post-processed music (with applied equaliser etc) ba
    - VLAN priority __6__
    - Name `TEST`
    - Type __DynamicRTP-98__
+
+One thing that I never though of, but now it makes total sense - parking sensor has its own beeper and doesn't rely on the headunit at all (and that way it can start beeping as soon as car is started, before the headunit loaded)
