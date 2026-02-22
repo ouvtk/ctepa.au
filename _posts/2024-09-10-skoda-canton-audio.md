@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unhappy story (so far) of Skoda Kodiaq Canton replacement"
+title: "Struggles of Skoda Kodiaq Canton replacement"
 ---
 
 TL;DR: I don’t have a suitable solution. This is not a guide; it is a stream of thoughts to document how I got here.
@@ -8,9 +8,9 @@ TL;DR: I don’t have a suitable solution. This is not a guide; it is a stream o
 If you are looking for a feasible Canton replacement, you probably need to find a solution to get the signal out of the factory amplifier to a digital signal processor (DSP) and then to an amplifier.
 I've also heard anecdotes about re-coding the car audio head unit to behave as a non-Canton one, which may be an option if you are in Europe.
 
-I haven't accepted this fate yet, as it leads towards a complex system with likely compromised quality (and also an overall expensive system as a bonus).
+And considering how much more effort it may still take, I've accepted the above fate, even though it leads towards a complex system with likely compromised quality (and also an overall expensive system as a bonus). Will be looking into getting high-level outputs from the factory amplifier to Helix DSP.
 
-Trying to find a special way.
+But I was trying to find a special way.
 
 # Input parameters
 Skoda Kodiaq 2021 with Canton audio installed:
