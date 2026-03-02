@@ -28,8 +28,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ouvtk
 linkedin_username: ctepa
 author: Stepan Tsymbal
-show_excerpts: true
 
+show_excerpts: true
+excerpt_separator: "<!--*~-.,¸excerpt¸.-~·*-->"
 # Build settings
 theme: minima
 plugins:

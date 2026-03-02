@@ -4,7 +4,7 @@ title: "Enhance the candidate's interview experience"
 ---
 
 The job interviewing is a hard work for both candidates and hiring teams.
-
+<!--*~-.,¸excerpt¸.-~·*-->
 Many crucial parts must come together to finalise a great hire:
  - having the right job description, 
  - knowing why do you want to hire this person,

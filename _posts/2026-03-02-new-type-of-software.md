@@ -7,6 +7,8 @@ On the topic of losing jobs versus transforming jobs.
 
 TL;DR: Generative Artificial Intelligence (GenAI), together with agentic loops, can already yield good results during software development, but it is far from being a silver bullet. Will there be a decent chunk of time when human-written software still requires a developer in the loop? And will software created from scratch by automation be able to grow in complexity relying only on generative / agentic skills?
 
+<!--*~-.,¸excerpt¸.-~·*-->
+
 Living in an era of AI hype, it is very hard to understand the real capabilities of Large Language Model (LLM)-assisted coding. And creating fakes has never been as easy as it is now.
 
 From personal experience, LLM assistance is great in the areas of knowledge search with the addition of retrieval-augmented generation (RAG), as long as you double-check the sources. You have a pretty good chance that an LLM gives a good result in any area where you are not an expert anyway (at least not within a short time).

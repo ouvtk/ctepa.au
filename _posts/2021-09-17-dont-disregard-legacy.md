@@ -5,7 +5,7 @@ title: "Don't be afraid of legacy systems"
 
 I believe you can only gain certain experience while maintaining legacy software. 
 It is not always needed to chase greenfield projects.
-
+<!--*~-.,¸excerpt¸.-~·*-->
 Problem is that not every legacy system is beneficial for your skills and sanity.
 
 ## What is legacy
